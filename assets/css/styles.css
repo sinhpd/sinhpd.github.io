@@ -371,8 +371,8 @@ img {
 }
 
 .button--white:hover {
-    background-color: #FFF;
-    color: var(--first-color-alt);
+    background-color: var(--first-color-alt);
+    color: #FFF;
 }
 
 .button--flex {
@@ -1128,7 +1128,7 @@ img {
     }
 
     .home__container {
-        padding-top: 5.5rem;
+        padding-top: 1rem;
         column-gap: 2rem;
     }
 
@@ -1153,7 +1153,7 @@ img {
     }
 
     .about__description {
-        text-align: initial;
+        text-align: justify;
     }
 
     .about__info {
