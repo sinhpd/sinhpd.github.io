@@ -270,7 +270,7 @@ img {
 
 .home__content {
     grid-template-columns: .5fr 3fr;
-    padding-top:  3.5rem;
+    padding-top:  1rem;
     align-items: center;
 }
 
@@ -828,6 +828,10 @@ img {
     bottom: 0;
 }
 
+.swiper-pagination-bullet {
+    background-color: var(--first-color);
+}
+
 /*==================== CONTACT ME ====================*/
 .contact__container {
     row-gap: 3rem;
@@ -1083,7 +1087,7 @@ img {
     }
 
     .section {
-        padding: 4rem 0 2rem;
+        padding: 3rem 0 2rem;
     }
 
     .section__subtitle {
@@ -1283,6 +1287,10 @@ img {
 
     .swiper-container-horizontal > .swiper-pagination-bullets {
         bottom: -4.5rem;
+    }
+
+    .swiper-pagination-testimonial {
+        bottom: 0 !important;
     }
 
     .contact__from {
