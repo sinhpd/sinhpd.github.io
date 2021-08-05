@@ -399,6 +399,11 @@ img {
     color: var(--first-color-alt);
 }
 
+.button[type="submit"] {
+    border-width: 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
 /*==================== ABOUT ====================*/
 .about__img {
