@@ -24,7 +24,7 @@ function initClient() {
     }
   }
 
-  function onSubmitContact(event) {
+  function onSubmitContact() {
     gapi.auth2.getAuthInstance().signIn();
   }
 
