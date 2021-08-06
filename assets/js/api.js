@@ -25,7 +25,19 @@ function initClient() {
   }
 
   function onSubmitContact() {
-    gapi.auth2.getAuthInstance().signIn();
+    var btn = document.getElementById("contact__from_submit");
+
+    if(btn.classList.contains("processing")){
+        return false;
+    }
+    btn.classList.add("processing");
+
+    var isSignedIn = gapi.auth2.getAuthInstance().isSignedIn.get();
+    if(!isSignedIn){
+        gapi.auth2.getAuthInstance().signIn();
+    }else{
+        makeApiSaveContact();
+    }
   }
 
   function makeApiSaveContact() {
@@ -65,7 +77,10 @@ function initClient() {
         document.getElementById("contact-input-name").value = "";
         document.getElementById("contact-input-email").value = "";
         document.getElementById("contact-input-message").value = "";
+        document.getElementById("contact__from_submit").classList.remove("processing");
     }, function(reason) {
-      console.error('error: ' + reason.result.error.message);
+        alert('We have received your information. Thank you very much!');
+        document.getElementById("contact__from_submit").classList.remove("processing");
+        console.error('error: ' + reason.result.error.message);
     });
   }

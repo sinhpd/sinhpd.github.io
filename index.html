@@ -27,9 +27,8 @@
         <link rel="stylesheet" href="./assets/css/styles.css">
 
         <title>SinhPD - Personal profile</title>
-
-        <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
         <script src="assets/js/api.js" ></script>
+        <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -962,7 +961,7 @@
 
                     </div>
 
-                    <form onsubmit="return onSubmitContact();" class="contact__from grid">
+                    <form onsubmit="onSubmitContact(); return false;" class="contact__from grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact__lable">Name</label>
@@ -978,8 +977,8 @@
                             <textarea id="contact-input-message" cols="0" rows="7" class="contact__input" required > </textarea>
                         </div>
                         <div>
-                            <button type="submit" class="button butto-flex" onclick="onSubmitContact();">
-                                Send Message <i class="uil uil-message button__icon"></i>
+                            <button type="submit" class="button butto-flex" id="contact__from_submit_">
+                                Send Message <i class="uil uil-message button__icon" ></i>
                             </a>
                         </div>
                     </form>
