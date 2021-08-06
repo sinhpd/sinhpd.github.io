@@ -8,8 +8,8 @@ function initClient() {
       'clientId': CLIENT_ID,
       'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
     }).then(function() {
-      gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
-      updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+      /*gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
+      updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());*/
     });
   }
 
@@ -17,11 +17,11 @@ function initClient() {
     gapi.load('client:auth2', initClient);
   }
 
-  function updateSignInStatus(isSignedIn) {
+  /*function updateSignInStatus(isSignedIn) {
     if (isSignedIn) {
         makeApiSaveContact();
     }
-  }
+  } */
 
   function onSubmitContact() {
     var btn = document.getElementById("contact__from_submit");
@@ -30,13 +30,13 @@ function initClient() {
         return false;
     }
     btn.classList.add("processing");
-
-    var isSignedIn = gapi.auth2.getAuthInstance().isSignedIn.get();
+    makeApiSaveContact();
+    /* var isSignedIn = gapi.auth2.getAuthInstance().isSignedIn.get();
     if(!isSignedIn){
         gapi.auth2.getAuthInstance().signIn();
     }else{
         makeApiSaveContact();
-    }
+    } */
   }
 
   function makeApiSaveContact() {
