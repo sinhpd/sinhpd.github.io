@@ -405,6 +405,15 @@ img {
     cursor: pointer;
 }
 
+.button.processing .uil-message:before {
+    content: '\ec3e';
+}
+
+.button.processing {
+    background-color: #dddddd;
+    color: black;
+}
+
 /*==================== ABOUT ====================*/
 .about__img {
     width: 200px;
