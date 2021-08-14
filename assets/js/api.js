@@ -37,12 +37,12 @@
           document.getElementById("contact-input-email").value = "";
           document.getElementById("contact-input-message").value = "";
           document.getElementById("contact__from_submit").classList.remove("processing");
-          document.getElementById("contact__from_submit_text").textContent = "Sending ...";
+          document.getElementById("contact__from_submit_text").textContent = "Send Message";
         } else {
           // Oh no! There has been an error with the request!
           alert('An error has occurred. Please try again!');
           document.getElementById("contact__from_submit").classList.remove("processing");
-          document.getElementById("contact__from_submit_text").textContent = "Sending ...";
+          document.getElementById("contact__from_submit_text").textContent = "Send Message";
         }
       }
     };

@@ -900,7 +900,13 @@ img {
 
 .contact__input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px var(--input-color) inset !important;
+    -webkit-text-fill-color: var(--text-color) !important;
 }
+
+.contact__lable {
+    font-weight: var(--font-semi-bold);
+}
+
 /*==================== FOOTER ====================*/
 .footer {
     padding-top: 2rem;
