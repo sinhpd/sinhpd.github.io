@@ -1,10 +1,12 @@
  function onSubmitContact() {
     var btn = document.getElementById("contact__from_submit");
+    var btnText = document.getElementById("contact__from_submit_text");
 
     if(btn.classList.contains("processing")){
         return false;
     }
     btn.classList.add("processing");
+    btnText.textContent = "Sending ...";
     makeApiSaveContact();
   }
 
@@ -35,10 +37,12 @@
           document.getElementById("contact-input-email").value = "";
           document.getElementById("contact-input-message").value = "";
           document.getElementById("contact__from_submit").classList.remove("processing");
+          document.getElementById("contact__from_submit_text").textContent = "Sending ...";
         } else {
           // Oh no! There has been an error with the request!
           alert('An error has occurred. Please try again!');
           document.getElementById("contact__from_submit").classList.remove("processing");
+          document.getElementById("contact__from_submit_text").textContent = "Sending ...";
         }
       }
     };
